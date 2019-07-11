@@ -9,7 +9,7 @@ const client = new Discord.Client();
 client.on('message', message => {
 if(message.author.bot) return;
 if(message.channel.type === 'dm') return;
-    if(message.content.startsWith(prefix + 'bc')) {
+    if(message.content.startsWith("R" + 'bc')) {
      let filter = m => m.author.id === message.author.id;
  
  let recembed = new Discord.RichEmbed()
