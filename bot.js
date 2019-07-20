@@ -10,6 +10,7 @@ client.on('message', message => {
 if(message.author.bot) return;
 if(message.channel.type === 'dm') return;
     if(message.content.startsWith("R" + 'bc')) {
+       if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
      let filter = m => m.author.id === message.author.id;
  
  let recembed = new Discord.RichEmbed()
