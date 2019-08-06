@@ -3,11 +3,12 @@ const client = new Discord.Client();
 var adminprefix = "R"
 
 //bc
+const prefix = "R"
 
 
 
 client.on('message', message => {
-  if(message.content.startsWith('R' + 'bc')) {
+  if(message.content.startsWith(prefix + 'bc')) {
             if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1).join(" ");
   if(!args) return message.channel.send(`**:rolling_eyes: please type the broadcast message**`)
